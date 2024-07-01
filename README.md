@@ -248,7 +248,7 @@ that are nicely grouped and are smooth thanks to libraries used.
 With the ready graphs, we can further analyze them. It can also be used for machine learning.
 
 #### Benefits of using LightningChart
-LightningChart provides a lot of ready-made options for creating graphs. Otherwise, we would have a headache creating proper charts for Python heart rate displaying, whilst LightningChart has powerful tools to create XY chart with a huge amount of points in almost no time.
+LightningChart provides a lot of ready-made options for creating graphs. Otherwise, we would have a headache creating proper charts for Python vital signs dashboard, whilst LightningChart has powerful tools to create XY chart with a huge amount of points in almost no time.
 
 There are lots of other tools in the library, you can review various code snippets for different tasks at [LightningChart Python Guide](https://lightningchart.com/python-charts/docs/).
 

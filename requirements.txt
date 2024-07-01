@@ -22,7 +22,7 @@ itsdangerous==2.2.0
 jedi==0.19.1
 Jinja2==3.1.4
 kiwisolver==1.4.5
-lightningchart @ file:///Users/giba/LightningChart/vitalsigns/lightningchart-0.7.1.1-py3-none-any.whl#sha256=07399b529d37c1ebc7a8177d5fbd94e9b0181b2a18c81d740f9cd683e2fbec5d
+lightningchart==0.7.2
 MarkupSafe==2.1.5
 matplotlib==3.9.0
 matplotlib-inline==0.1.7

@@ -219,20 +219,22 @@ series_art.set_max_sample_count(10000)
 series_co2.set_max_sample_count(10000)
 ```
 Then, we are ready to put data. Remember that we need to do it gradually for progressive chart to work. 
-You can experiment with adding multiple entries (5, 10, ...) or changing sleep time.
+You can experiment with different number of entries (e.g. 10) or changing sleep time.
 ```python
 dashboard.open(live=True)
 
-for point in range(len(x)):
-    series_ecg.add(int(x[point]), float(y_ecg[point]))
-    series_pleth.add(int(x[point]), float(y_pleth[point]))
-    series_art.add(int(x[point]), float(y_art[point]))
-    series_co2.add(int(x[point]), float(y_co2[point]))
-    if temp[point] != 0:
-        chart_temp.set_value(temp[point])
-
-    if heartrate[point] != 0:
-        chart_heartrate.set_value(heartrate[point])
+for point in range(0, len(x), 5):
+    series_ecg.add(x[point:point+5], y_ecg[point:point+5])
+    series_pleth.add(x[point:point+5], y_pleth[point:point+5])
+    series_art.add(x[point:point+5], y_art[point:point+5])
+    series_co2.add(x[point:point+5], y_co2[point:point+5])
+    
+    for i in range(point, point + 5):
+        if temp[i] != 0:
+            chart_temp.set_value(temp[i])
+    for i in range(point, point + 5):
+        if heartrate[i] != 0:
+            chart_heartrate.set_value(heartrate[i])
 
     time.sleep(0.01)
 
